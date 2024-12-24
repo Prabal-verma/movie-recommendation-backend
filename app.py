@@ -19,8 +19,8 @@ class CustomJSONEncoder(json.JSONEncoder):
 app.json_encoder = CustomJSONEncoder
 
 # Load the pickle files
-movies = pickle.load(open("./../../model/movie_list.pkl", "rb"))
-similarity = pickle.load(open("./../../model/similarity.pkl", "rb"))
+movies = pickle.load(open("./model/movie_list.pkl", "rb"))
+similarity = pickle.load(open("./model/similarity.pkl", "rb"))
 
 @app.route("/movies", methods=["GET"])
 def get_movies():
